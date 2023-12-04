@@ -1,42 +1,155 @@
 
 d4 $ s "[bd | bd | bd | bd | bd | bd*4 | ~ | ~ | ~ | ~ | ~ | ~ | bd | bd | bd | bd | bd*59 | bd | bd | bd*2] ~ [sd | sd | sd | sd | sd | sd*5 | ~ | ~ | ~ | ~ | ~] ~ [bd | bd | bd | bd*5 | bd*2 | bd*3 | bd | bd | bd | bd | ~ | ~ | ~ | ~] ~ [~ | ~ | ~ | ~ | sd | sd | sd | sd | sd | sd | sd | sd | sd | sd | sd | sd | sd | sd | sd | sd*6 | sd*999]" # pan sine
 hush
+
 d1 $ s ""
-d3 $ s "[hc | ho | hc | ho | hc | ho | hc | ho | hc*5 | ho*7 | ho*300] [~ | ~ | ~ | ~ | ho | hc | ho | hc*3 | ho*3 | hc*5 | ho | hc | ho | hc] [~ | ~ | ~ | ~ | ~ | ~ | hc | hc | ho | hc | ho | hc | ho | ho*251] [~ | ~ | ~ | ~ | hc | ho | hc | ho | hc | ho | hc | ho | hc | ho | ho | hc | ho | hc*351] [~ | ~ | ~ | ~ | hc | ho | hc | ho | hc | ho | hc | ho | hc | ho*613] [~ | ~ | ~ | ~ | ~ | hc | ho | hc | ho | hc | ho | hc | ho | hc] [~ | ~ | ~ | ~ | hc | ho | hc | ho | hc*2 | hc | ho | hc | ho | hc | ho | hc | ho*719 | ho*3 | hc*6 | ho*5 | hc*4] hc ho" # pan sine # gain 0.75
-d4 $ n "1 1 4 5 6 2 3 4 5 8 9 2 8 11 32 24 25" # s "amencutup*2"
-d4 $ n "1 2 3 1 2 3 1 2 3 4 4 8 8 9 1 1 1 32 31 30 29 5 8 7" # s "amencutup*2"
-once $ arp "downup" $ s "bass1*4" # n "bb'min a'min ab'min g'min"
-d1 $ s "bassfoo" # n "1"
-d2 $ arp "updown" $ n "c'major c'major c'major eb'major eb'major e'major e'major" # s "arpy*4" # gain 0.9 # legato 2
-d2 $ arp "updown" $ n "c'major c'major c'major eb'major eb'major e'major e'major" # s "arpy*4" # gain 0.9 # legato 0.5 # phaserdepth 0.7 # phaserrate 0.7
-d2 $ arp "updown" $ n "c'minor c'minor c'minor b'major b'major e'minor e'minor" # s "arpy*4" # gain 0.9 # legato 0.5
-d2 $ arp "updown" $ n "c'minor c'minor c'minor b'major b'major e'minor e'minor" # s "arpy*4" # gain 0.9 # legato 0.5 # delay 0.3
 
-d2 $ arp "downup" $ n "c'major c'major c'major eb'major eb'major e'major e'major" # s "arpy*4" # delay 0.5 # legato 2 # gain 0.8
-d2 $ arp "downup" $ n "c'major c'major c'major eb'major eb'major e'major e'major" # s "arpy*4" # delay 0.5 # legato 0.5 # gain 0.8
+d3 $ s "[hc | ho | hc | ho | hc | ho | hc | ho | hc*5 | ho*7 | ho*300] [~ | ~ | ~ | ~ | ho | hc | ho | hc*3 | ho*3 | hc*5 | ho | hc | ho | hc] [~ | ~ | ~ | ~ | ~ | ~ | hc | hc | ho | hc | ho | hc | ho | ho*251] [~ | ~ | ~ | ~ | hc | ho | hc | ho | hc | ho | hc | ho | hc | ho | ho | hc | ho | hc*351] [~ | ~ | ~ | ~ | hc | ho | hc | ho | hc | ho | hc | ho | hc | ho*613] [~ | ~ | ~ | ~ | ~ | hc | ho | hc | ho | hc | ho | hc | ho | hc] [~ | ~ | ~ | ~ | hc | ho | hc | ho | hc*2 | hc | ho | hc | ho | hc | ho | hc | ho*719 | ho*3 | hc*6 | ho*5 | hc*4] hc ho"
+  # pan sine
+  # gain 0.75
 
-d2 $ s "arpy*4" $ every 2 (arp "updown" $ n "c'minor c'minor c'minor b'major b'major e'minor e'minor") $ arp "downup" $ n "c'major c'major c'major eb'major eb'major e'major e'major" # s "arpy*4" # delay 0.5 # legato 0.5 # gain 0.8
+d4 $ n "1 1 4 5 6 2 3 4 5 8 9 2 8 11 32 24 25"
+  # s "amencutup*2"
+
+d4 $ n "1 2 3 1 2 3 1 2 3 4 4 8 8 9 1 1 1 32 31 30 29 5 8 7"
+  # s "amencutup*2"
+
+once $ arp "downup"
+  $ s "bass1*4"
+  # n "bb'min a'min ab'min g'min"
+
+d1 $ s "feelfx*16"
+  # n "1 4 3 7"
+  # pan saw
+
+d1 $ s "feelfx*16"
+  # n "4"
+  # pan saw
+
+d2 $ arp "updown"
+  $ n "c'major g'major b'major f'major eb'major db'major cb'major"
+  # s "arpy*4"
+  # gain 1
+  # legato 0.7
+  # pan isaw
+  # delay 0.5
+
+d2 $ arp "updown"
+  $ n "c'major c'major c'major eb'major eb'major e'major e'major"
+  # s "arpy*4"
+  # gain 0.9
+  # legato 0.5
+  # phaserdepth 0.7
+  # phaserrate 0.7
+
+d2 $ arp "updown"
+  $ n "c'minor c'minor c'minor b'major b'major e'minor e'minor"
+  # s "arpy*4"
+  # gain 0.9
+  # legato 0.5
+
+d2 $ arp "updown"
+  $ n "c'minor c'minor c'minor b'major b'major e'minor e'minor"
+  # s "arpy*4"
+  # gain 0.9
+  # legato 0.5
+  # delay 0.3
+
+d2 $ arp "downup"
+  $ n "c'major c'major c'major eb'major eb'major e'major e'major"
+    # s "arpy*4"
+    # delay 0.5
+    # legato 2
+    # gain 0.8
+
+d2 $ arp "downup"
+  $ n "c'major c'major c'major eb'major eb'major e'major e'major"
+  # s "arpy*4"
+  # delay 0.5
+  # legato 0.5
+  # gain 0.8
+
+d2 $ s "arpy*4" $ every 2 (arp "updown"
+  $ n "c'minor c'minor c'minor b'major b'major e'minor e'minor")
+  $ arp "downup"
+  $ n "c'major c'major c'major eb'major eb'major e'major e'major"
+  # s "arpy*4"
+  # delay 0.5
+  # legato 0.5
+  # gain 0.8
 d2 $ s""
-d4 $ n "32 32 4 5 8 8 9 1 1 1 1 2 2 3 4 6 5 8 7" # s "amencutup*2"
-d4 $ n "32 32 4 5 8 8 9 1 1 1 1 2 2 3 4 6 5 8 7" # s "amencutup*3"
-d3 $ s "birds" # n "1 1 4 1 5 6 7 1" # pan isaw # gain 1.5
+d4 $ n "32 32 4 5 8 8 9 1 1 1 1 2 2 3 4 6 5 8 7"
+  # s "amencutup*2"
+  # gain 1.5
+d4 $ n "32 32 4 5 8 8 9 1 1 1 1 2 2 3 4 6 5 8 7"
+  # s "amencutup*3"
+d3 $ s "birds"
+  # n "1 1 4 1 5 6 7 1"
+  # pan isaw
+  # gain 1.5
 d4 $ s ""
-d4 $ n "32 32 4 5 8 8 9 1 1 1 1 2 2 3 4 6 5 8 7" # s "amencutup*2"
+d4 $ s "amencutup*75"
+  # n "32 32 4 5 8 8 9 1 1 1 1 2 2 3 4 6 5 8 7"
+  # gain 1.3
 d1 $ s ""
 d2 $ s ""
 d3 $ s ""
 d4 $ s ""
+setcps (120/60/16)
+d4 $ s "print*64"
+  # n "{1 ~ 1 ~ 1 3 ~ ~ 2 ~ ~ 2 3 ~ 6 ~ ?, 6 6 12 6 12 6 6 2 15 13 12 6 6 ?}"
+  # gain 1.5
+  # delay 0.6
 
-d4 $ s "jungle*8" # n "{1 ~ 1 ~ 1 1 ~ ~ 1 ~ ~ 1 1 ~ 1 ~, 6 6 12 6 12 6 6 12 12 13 12 6 6}"
+d3 $ s "bev"
+  # n "1 1 1 1 1 1 5 5 5 1 1 "
+  # gain 1.2
+  # delay 0.3
+  # pan sine
 
-d1 $ s "bassfoo" # n "1"
-d3 $ s "birds" # n "1 1 4 1 5 6 7 1" # pan isaw # gain 1.2
-d4 $ n "32 32 4 5 8 8 9 1 1 1 1 2 2 3 4 6 5 8 7" # s "amencutup*2"
-d2 $ arp "updown" $ n "c'major c'major c'major eb'major eb'major e'major e'major" # s "arpy*4" # gain 0.9 # legato 0.5 # phaserdepth 0.7 # phaserrate 0.7
+panic
+
+d1 $ s "bassfoo"
+  # n "1"
+
+d3 $ s "birds"
+  # n "1 1 4 1 5 6 7 1"
+  # pan isaw
+  # gain 1.5
+
+d4 $ n "32 32 4 5 8 8 9 1 1 1 1 2 2 3 4 6 5 8 7"
+  # s "amencutup*2"
+
+d2 $ arp "updown"
+  $ n "c'major c'major c'major eb'major eb'major e'major e'major"
+  # s "arpy*256"
+  # gain 0.9
+  # legato 0.5
+  # phaserdepth 0.7
+  # phaserrate 0.7
+
 d1 $ s ""
+
 d3 $ s ""
 
+d1 $ s "superpiano*8"
+  # note "c2 g2 c2 g2 c2 g2 c2 g2"
+  # gain 1.5
+
+d2 $ s "arpy*64"
+  # note "c4 ~ ~ ~ d4 ~ ~ c4 a3 ~ ~ ~ a3 ~ ~ ~ a3 ~ ~ g3 a3 ~ ~ bf3 a3 ~ ~ ~ ~ ~ ~ ~ bf3 ~ ~ ~ g3 ~ ~ c4 a3 ~ ~ ~ ~ ~ ~ ~ f3 ~ ~ ~ d4 ~ ~ g3 c3 ~ ~ ~ ~ ~ ~ ~"
+  # gain 1.5
+
+d2 $ s "arpy*64"
+  # note "c ~ ~ ~ d ~ ~ c a ~ ~ ~ a ~ ~ ~ a ~ ~ g a ~ ~ bf a ~ ~ ~ ~ ~ ~ ~ bf ~ ~ ~ g ~ ~ c a ~ ~ ~ ~ ~ ~ ~ f ~ ~ ~ d ~ ~ g c ~ ~ ~ ~ ~ ~ ~"
+  # gain 1.5
+
+d2 $ s "moog*64"
+  # note "c3 ~ ~ ~ d3 ~ ~ c3 a2 ~ ~ ~ a2 ~ ~ ~ a2 ~ ~ g2 a2 ~ ~ bf2 a2 ~ ~ ~ ~ ~ ~ ~ bf2 ~ ~ ~ g2 ~ ~ c3 a2 ~ ~ ~ ~ ~ ~ ~ f2 ~ ~ ~ d3 ~ ~ g2 c2 ~ ~ ~ ~ ~ ~ ~"
+  # gain 1.5
+
+hush
 
 
 
-once $ s "xmas" # speed 0.25
+once $ s "xmas" # speed 1 # gain 2
